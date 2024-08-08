@@ -75,7 +75,7 @@ function init() {
   }, 50);
 }
 
-setInterval(init, 5000);
+setInterval(init, 4000);
 
 //  mode switch function
 
