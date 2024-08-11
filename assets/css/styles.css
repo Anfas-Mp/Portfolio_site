@@ -618,7 +618,7 @@ h2 {
 }
  .projimg{
   width: 100%;
-  height: 580px;
+  height: 700px;
  }
 .projects-section {
   padding: 40px;
@@ -792,8 +792,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  margin-top: 50px;
+  gap: 5rem;
+  margin-top: 40px;
 }
 
 .contactbutton {
@@ -1348,6 +1348,7 @@ body.preloader-active {
   --button_outline_color: #000000;
   font-size: 17px;
   font-weight: bold;
+  margin-top: 25px;
   border: none;
   border-radius: var(--button_radius);
   background: var(--button_outline_color);

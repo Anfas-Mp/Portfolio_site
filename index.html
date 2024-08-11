@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
 
-
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap">
 
@@ -30,11 +29,161 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/styles.css" rel="stylesheet">
 
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "XkWnjRrwvOCTkv5d4",
+        });
+    })();
+    </script>
+
     <!-- Preloader CSS -->
     <style>
         .hidden {
             display: none;
         }
+
+.project-sec {
+    padding: 6rem;
+  
+    font-family: 'JetBrains Mono', monospace;
+  
+    height: 85vh;
+  
+    overflow-y: auto;
+  }
+  
+  .projects-sec h3 {
+    font-size: 2.4rem;
+  
+    text-align: start;
+  
+    margin-bottom: 4rem;
+  }
+  
+  .projects-sec::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  .projects-sec::-webkit-scrollbar-track {
+    background: var(--active-bg-color); 
+    border-left: 1px solid var(--border-color);
+  }
+  
+  .projects-sec::-webkit-scrollbar-thumb {
+    border-left: 1px solid var(--border-color);
+    background: #333536; 
+  }
+  
+  .pro-card-list {
+    display: flex;
+    
+    gap: 4rem;
+  }
+  
+  .pro-card {
+    width: min(35rem, 100%);
+    height: fit-content;
+  
+    background: var(--darker-bg-color);
+  
+    border-radius: 1.5rem;
+  
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 40%);
+  
+    cursor: pointer;
+  
+    transition: 0.5s;
+  }
+  
+  .pro-card:hover {
+    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 40%);
+    
+    transform: translateY(-6px);
+  }
+  
+  .pro-card img {
+    width: 100%;
+    min-height: 19rem;
+    max-height: 19rem;
+  
+    object-fit: cover;
+  
+    border-radius: 1.5rem;
+  }
+  
+  .pro-info {
+    padding: 1rem 2rem 2rem;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  .card-text h5 {
+    font-size: 2rem;
+  }
+  
+  .card-text p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .card-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .card-buttons a {
+    height: 3.6rem;
+  
+    display: grid;
+    place-items: center;
+  
+    position: relative;
+  
+    cursor: pointer;
+  
+    border-radius: 0.8rem;
+    border: 2px solid #efefef;
+  
+    background: transparent;
+  
+    font-weight: bolder;
+    color: #efefef;
+    text-decoration: none;
+  
+    transition: 0.4s;
+  }
+  
+  .card-buttons a:hover {
+    color: var(--darker-bg-color);
+  }
+  
+  .card-buttons a::before {
+    content: '';
+  
+    position: absolute;
+    left: 0; top: 0;
+    z-index: -1;
+  
+    width: 0;
+    height: 100%;
+  
+    background: #efefef;
+  
+    transition: 0.6s;
+  }
+  
+  .card-buttons a:hover:before {
+    width: 100%;
+  }
+  
     </style>
 </head>
 
@@ -101,7 +250,7 @@
                         <a href="https://drive.google.com/file/d/1xmdpYyx9Wl2daJ824PpFQcV3uv8O2PKh/view?usp=sharing"
                             download><button class="resumebtn type1 ">
                                 <span class="btn-txt">my resume ⭳</span>
-                              </button></a>
+                            </button></a>
                     </div>
 
 
@@ -206,11 +355,11 @@
                                 <!-- Content -->
                                 <div class="col-md-7 about-content">
                                     <p class="about-para">
-                                        Hello! I'm Anfas, a passionate Python Django web developer with expertise in
+                                        Hello! I'm a passionate Python Django web developer with expertise in
                                         building dynamic and
                                         responsive web applications. With a strong foundation in computer science and a
                                         keen interest in web
-                                        technologies, I have honed my skills in Python, Django, and various other
+                                        technologies, I have honed my skills in Django React and various other
                                         frameworks and tools. I
                                         enjoy solving complex problems and continuously learning to stay updated with
                                         the latest industry
@@ -434,7 +583,30 @@
                                     </div>
                                 </div>
 
+
                                 <!-- Project 2 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card">
+                                        <img class="card-img-top projimg"
+                                            src="assets/img/projects/bloodbank/iPhone-13-PRO-127.0.0.1 (1).png"
+                                            alt="Fc blood bank">
+                                        <div class="card-body">
+                                            <h2 class="card-title">Fc Blood Bank website</h2>
+                                            <p class="card-text project-para">The FC Blood Bank Website facilitates
+                                                efficient blood donation and distribution by connecting donors and
+                                                recipients. It features a user-friendly interface for registration,
+                                                real-time inventory management, and secure data handling, ensuring
+                                                seamless and reliable access to blood resources.</p>
+                                        </div>
+                                        <div class="card-footer project-links">
+                                            <a href="https://github.com/Anfas-Mp/Fcbloodbank" class="source-code">Source
+                                                Code <i class="ri-github-line"></i></a>
+                                            <a href="#" class="view">View <i class="ri-dribbble-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Project 3 -->
                                 <div class="col-md-6 col-lg-4 mb-4">
                                     <div class="card">
                                         <img class="card-img-top projimg"
@@ -459,99 +631,6 @@
                                     </div>
                                 </div>
 
-                                <!-- Project 3 -->
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card">
-                                        <img class="card-img-top projimg"
-                                            src="assets/img/projects/bloodbank/iPhone-13-PRO-127.0.0.1 (1).png"
-                                            alt="Fc blood bank">
-                                        <div class="card-body">
-                                            <h2 class="card-title">Fc Blood Bank website</h2>
-                                            <p class="card-text project-para">The FC Blood Bank Website facilitates
-                                                efficient blood donation and distribution by connecting donors and
-                                                recipients. It features a user-friendly interface for registration,
-                                                real-time inventory management, and secure data handling, ensuring
-                                                seamless and reliable access to blood resources.</p>
-                                        </div>
-                                        <div class="card-footer project-links">
-                                            <a href="https://github.com/Anfas-Mp/Fcbloodbank" class="source-code">Source
-                                                Code <i class="ri-github-line"></i></a>
-                                            <a href="#" class="view">View <i class="ri-dribbble-line"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Project 4 -->
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card">
-                                        <img class="card-img-top projimg"
-                                            src="assets/img/projects/pig_game/iPhone-13-PRO-127.0.0.1.png"
-                                            alt="Pig Game App">
-                                        <div class="card-body">
-                                            <h2 class="card-title">Pig Game</h2>
-                                            <p class="card-text project-para">The Pig Game is a two-player dice game
-                                                built using JavaScript, where players roll dice to accumulate points.
-                                                Rolling a '1' resets the current score, adding a strategic twist. The
-                                                game features a clean, intuitive interface and is fully responsive for
-                                                both desktop and mobile devices. Key elements include options to start a
-                                                new game, roll the dice, and hold the score.</p>
-                                        </div>
-                                        <div class="card-footer project-links">
-                                            <a href="https://github.com/Anfas-Mp/pig-game" class="source-code">Source
-                                                Code <i class="ri-github-line"></i></a>
-                                            <a href="https://pig-game-js-dom.netlify.app/" class="view">View <i
-                                                    class="ri-dribbble-line"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Project 5 -->
-
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card">
-                                        <img class="card-img-top projimg"
-                                            src="assets/img/projects/todoapp/iPhone-13-PRO-127.0.0.1.png"
-                                            alt="Todo App">
-                                        <div class="card-body">
-                                            <h2 class="card-title">Todo App</h2>
-                                            <p class="card-text project-para">The Todo App helps users efficiently
-                                                manage their tasks and schedules. The app features task creation,
-                                                editing, prioritization, and progress tracking, offering a clean and
-                                                intuitive interface to boost productivity and organization. Users can
-                                                categorize tasks and set deadlines, ensuring they stay on top of their
-                                                responsibilities.</p>
-                                        </div>
-                                        <div class="card-footer project-links">
-                                            <a href="https://github.com/Anfas-Mp/todo" class="source-code">Source
-                                                Code <i class="ri-github-line"></i></a>
-                                            <a href="#" class="view">View <i class="ri-dribbble-line"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Project 6 -->
-                                <div class="col-md-6 col-lg-4 mb-4">
-                                    <div class="card">
-                                        <img class="card-img-top projimg"
-                                            src="assets/img/projects/todoapp/iPhone-13-PRO-127.0.0.1.png"
-                                            alt="Todo App">
-                                        <div class="card-body">
-                                            <h2 class="card-title">Todo List</h2>
-                                            <p class="card-text project-para">The Todo App helps users efficiently
-                                                manage their tasks and schedules. The app features task creation,
-                                                editing, prioritization, and progress tracking, offering a clean and
-                                                intuitive interface to boost productivity and organization. Users can
-                                                categorize tasks, set deadlines, ensuring they stay on top of their
-                                                responsibilities.</p>
-                                        </div>
-                                        <div class="card-footer project-links">
-                                            <a href="https://github.com/Anfas-Mp/todo" class="source-code">Source
-                                                Code <i class="ri-github-line"></i></a>
-                                            <a href="#" class="view">View <i class="ri-dribbble-line"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-
 
                             </div>
                         </div>
@@ -566,105 +645,142 @@
                             <div class="form-wrapper">
                                 <h2 class="topheading text-center mb-5">Let's Connect!</h2>
                                 <div class="form-inner-wrapper">
-                                    <form id="contactForm" method="post" action="http://jessiking.com/js/contact.php"
-                                        method="post">
+                                    <!-- contact form -->
+                                    <form id="submitform" action="https://formsubmit.co/el/tepepo" method="POST">
                                         <div class="field-list clear">
                                             <div id="name" class="form-item field email required">
                                                 <label class="title" for="name">Name <span
                                                         class="required">*</span></label>
-                                                <input class="field-element" name="name" x-autocompletetype="name"
-                                                    type="text" spellcheck="false">
+                                                <input class="field-element" id="name" name="name"
+                                                    x-autocompletetype="name" type="text" spellcheck="false" required>
                                             </div>
 
                                             <div id="email" class="form-item field email required">
                                                 <label class="title" for="email">Email Address <span
                                                         class="required">*</span></label>
-                                                <input class="field-element" name="email" x-autocompletetype="email"
-                                                    type="text" id="email-field">
+                                                <input class="field-element" id="email" name="email"
+                                                    x-autocompletetype="email" type="text" id="email-field" required>
                                             </div>
+
                                             <div id="textarea" class="form-item field textarea required">
                                                 <label class="title" for="textarea-field">Message <span
                                                         class="required">*</span></label>
-                                                <textarea class="field-element" id="textarea--field"
-                                                    name="message"></textarea>
+                                                <textarea class="field-element" id="message" name="message"></textarea>
                                             </div>
                                             <div id="contactResponse"></div>
 
                                             <div class="form-button-wrapper form-button-wrapper--align-center">
-                                                <button class="submit">
-                                                    <span class="button_top"> Submit
+                                                <button class="submit" type="button" onclick="sendemail()">
+                                                    <span class="button_top"> Send Message <i class="bi bi-send-fill"></i>
                                                     </span>
                                                 </button>
                                             </div>
-
-                                            <!-- icons -->
-                                            <div class="button-container">
-                                                <button class="contactbutton flex-center">
-                                                    <svg viewBox="0 0 24 24" class="btn-svg" width="22px" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round"
-                                                            stroke-linejoin="round"></g>
-                                                        <g id="SVGRepo_iconCarrier">
-                                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
-                                                                fill="#fff"></path>
-                                                            <path
-                                                                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
-                                                                fill="#fff"></path>
-                                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
-                                                                fill="#fff"></path>
-                                                        </g>
-                                                    </svg>
-                                                </button>
-
-                                                <button class="contactbutton flex-center">
-                                                    <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" class="btn-svg"
-                                                        width="22px" viewBox="0 0 24 24">
-                                                        <g fill="none" fill-rule="evenodd">
-                                                            <path d="M0 0h24v24H0z"></path>
-                                                            <path fill="#fff"
-                                                                d="M20.447 20.452h-3.554V15.78c0-1.114-.019-2.551-1.556-2.551-1.557 0-1.797 1.216-1.797 2.47v4.753H10v-9.569h3.414v1.308h.048c.477-.9 1.642-1.851 3.38-1.851 3.614 0 4.285 2.376 4.285 5.464v5.648zM7.337 10.644c-1.14 0-2.062-.927-2.062-2.065 0-1.138.922-2.065 2.062-2.065 1.14 0 2.062.927 2.062 2.065 0 1.138-.922 2.065-2.062 2.065zM8.543 20.452H6.129v-9.569h2.414v9.569zM22.225 0H1.771C.791 0 0 .775 0 1.731v20.538C0 23.225.791 24 1.771 24h20.451c.98 0 1.771-.775 1.771-1.731V1.731C24 .775 23.205 0 22.225 0z">
-                                                            </path>
-                                                        </g>
-                                                    </svg>
-                                                </button>
-
-                                                <a href="https://github.com/YourGitHubUsername" target="_blank" rel="noopener noreferrer">
-                                                    <button class="contactbutton flex-center">
-                                                        <svg viewBox="0 0 20 20" width="22px" class="btn-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff" stroke="#fff">
-                                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                                            <g id="SVGRepo_iconCarrier">
-                                                                <title>github [#fff142]</title>
-                                                                <desc>Created with Sketch.</desc>
-                                                                <defs></defs>
-                                                                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                                    <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#fff">
-                                                                        <g id="icons" transform="translate(56.000000, 160.000000)">
-                                                                            <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#fff142]"></path>
-                                                                        </g>
-                                                                    </g>
-                                                                </g>
-                                                            </g>
-                                                        </svg>
-                                                    </button>
-                                                </a>
-                                                
-
-                                            </div>
-                                            <!-- icons end -->
                                         </div>
                                     </form>
+
                                 </div>
+                                <!-- icons -->
+
+                                <div class="button-container">
+                                    <a class="socialContainer containerThree"
+                                        href="https://www.linkedin.com/in/anfas-mp-46963924a/">
+                                        <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
+                                            <path
+                                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                            </path>
+                                        </svg>
+                                    </a>
+
+                                    <a class="socialContainer containerThree"
+                                        href="https://mail.google.com/mail/?view=cm&fs=1&to=anfasmpanfasanu@gmail.com&su=Your%20Subject%20Here">
+                                        <svg class="socialSvg linkdinSvg" xmlns="http://www.w3.org/2000/svg" width="16"
+                                            height="16" fill="white" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                                            <path
+                                                d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671" />
+                                            <path
+                                                d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791" />
+                                        </svg>
+                                    </a>
+                                </div>
+                                <!-- icons end -->
                             </div>
                         </div>
 
                     </section>
 
-                    
+
                     <!-- contact section end -->
+
+                    <section class="projects-sec">
+                        <h3>Stuff I've Built in Imersão Dev</h3>
+                
+                          <div class="project-cards-list">
+                            <div class="pro-card">
+                              <img src="https://cdn.discordapp.com/attachments/841898960737402883/1021118223514620025/Screenshot_10.png" alt="" class="project-image">
+                
+                              <div class="pro-info">
+                                <div class="card-text">
+                                  <h5>AluraFlix</h5>
+                                  <p>Adicione ou remova seus Filmes/Séries favoritos e os deixe em destaque na sua lista.</p>
+                                </div>
+                
+                                <div class="card-buttons">
+                                  <a href="https://codepen.io/Stooorm/pen/GRdoGzz" target="_blank">Source Code</a>
+                                  <a href="https://codepen.io/Stooorm/full/GRdoGzz" target="_blank">Live Demo</a>
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="pro-card">
+                              <img src="https://cdn.discordapp.com/attachments/841898960737402883/1021118222189199501/Screenshot_1.png" alt="" class="project-image">
+                
+                              <div class="pro-info">
+                                <div class="card-text">
+                                  <h5>Mentalista</h5>
+                                  <p>Tente adivinhar o número secreto com até 3 tentativas.</p>
+                                </div>
+                
+                                <div class="card-buttons">
+                                  <a href="https://codepen.io/Stooorm/pen/dyeYEbV" target="_blank">Source Code</a>
+                                  <a href="https://codepen.io/Stooorm/full/dyeYEbV" target="_blank">Live Demo</a>
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="pro-card">
+                              <img src="https://cdn.discordapp.com/attachments/841898960737402883/1021118222608650420/Screenshot_2.png" alt="" class="project-image">
+                
+                              <div class="pro-info">
+                                <div class="card-text">
+                                  <h5>Conversor de Moedas</h5>
+                                  <p>Converta valores entre diferentes moedas de maneira rápida e fácil.</p>
+                                </div>
+                
+                                <div class="card-buttons">
+                                  <a href="https://codepen.io/Stooorm/pen/oNdjbMw?editors=0010" target="_blank">Source Code</a>
+                                  <a href="https://codepen.io/Stooorm/full/oNdjbMw" target="_blank">Live Demo</a>
+                                </div>
+                              </div>
+                            </div>
+                
+                            <div class="pro-card">
+                              <img src="https://cdn.discordapp.com/attachments/841898960737402883/1021118223061626891/Screenshot_3.png" alt="" class="project-image">
+                
+                              <div class="pro-info">
+                                <div class="card-text">
+                                  <h5>Calculadora de Média</h5>
+                                  <p>Obtenha o resultado da média entre 4 bimestres de maneira rápida e eficiente.</p>
+                                </div>
+                
+                                <div class="card-buttons">
+                                  <a href="https://codepen.io/Stooorm/pen/vYjOXdR?editors=0010" target="_blank">Source Code</a>
+                                  <a href="https://codepen.io/Stooorm/full/vYjOXdR" target="_blank">Live Demo</a>
+                                </div>
+                              </div>
+                            </div>
+                
+                          </div>
+                      </section>
                 </div>
             </div>
         </div>
@@ -680,9 +796,26 @@
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/js/main.js"></script>
-
-
-    
+    <script>
+        function sendemail(){
+            let email = document.getElementById("email").value;
+            let name = document.getElementById("name").value;
+            let message = document.getElementById("message").value;
+        
+            var templateParams = {
+                email:email,
+                name:name,
+                message:message
+              };
+        
+              emailjs.send('service_vyzlhyh', 'template_x0hyonk', templateParams)
+          .then(function(response) {
+             console.log('SUCCESS!', response.status, response.text);
+             window.alert("Sent successfully! Thank You for Reaching Out!");
+             
+          })    
+        }
+    </script>
 </body>
 
 </html>

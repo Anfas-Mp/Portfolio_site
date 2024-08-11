@@ -10,6 +10,8 @@ window.addEventListener("load", function () {
     mainContent.classList.remove("hidden");
   }, 2000); // Delay set to 2000 ms = 2 seconds
 });
+//preloader end
+
 
 // hacked text animation
 
@@ -76,6 +78,8 @@ function init() {
 }
 
 setInterval(init, 4000);
+//hacktext animation end
+
 
 //  mode switch function
 
@@ -92,3 +96,5 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
   });
 });
+
+//mode switch end
