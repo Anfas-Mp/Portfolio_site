@@ -3,6 +3,20 @@ body {
   font-family: 'Roboto Mono', monospace;
 }
 
+/* custom cursor */
+.circle {
+  height: 10px;
+  width: 10px;
+  border-radius: 15px;
+  background-color: black;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 99999999; /* so that it stays on top of all other elements */
+  }
+/* custom cursor end */
+
 .nav {
   position: fixed;
   left: 0;
@@ -33,7 +47,6 @@ body {
   }
 }
 
-
 .navbar-brand{
   font-weight: 700;
   font-size: 30px;
@@ -48,17 +61,17 @@ body {
   padding: 10px 0;
   font-weight: 700;
   font-size: 17px;
-  box-shadow: rgba(0, 0, 0, .1);
+  box-shadow: black;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -20px; /* Adjust this value to position the line */
+  bottom: -10px; /* Adjust this value to position the line */
   width: 100%;
   height: 2px; /* Line thickness */
-  background-color: #5b5b5b; /* Line color */
+  background-color: #4a4a4a; /* Line color */
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -68,7 +81,6 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-
 
 
 .desg{
@@ -170,67 +182,6 @@ scroll-behavior: smooth;
 }
 
 
-.html:hover{
-  fill:white;
-  background: orangered;
-}
-
-.javascript:hover{
-fill:white;
-background:#ffe600;
-}
-
-.mysql:hover{
-fill:white;
-background:#5d80c7;
-}
-
-.postgresql:hover{
-fill:white;
-background: whitesmoke;
-}
-
-.github{
-fill:black;
-}
-
-.bootstrap:hover{
-background-color: rgb(171, 39, 171);
-}
-
-.python:hover{
-background :#FF9900;
-}
-
-.react:hover{
-fill:white;
-background: rgb(44, 142, 255);
-}
-
-.flask:hover{
-fill:white;
-background: #ffd500;
-}
-
-.django:hover{
-fill:white;
-background: #087648;
-}
-
-.css:hover{
-fill: white;
-background-color: rgb(55, 55, 195);
-}
-
-.aws:hover{
-fill:white;
-background: #ff6a00;
-}
-
-.django:hover line,.codepen:hover polyline,.codepen:hover polygon{
-stroke:white;
-}
-
 
 
 .content {
@@ -268,12 +219,22 @@ h2 {
   font-size:20px;
   text-align: justify;
   font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.006em;
 }
 .about-content {
-  border: 1px solid black;
-  padding:35px; /* Optional: to add some space inside the border */
-  border-radius:55px;
-  background-color: white;
+  width: min(35rem, 100%);
+  height: fit-content;
+  background: var(--darker-bg-color);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 40%);
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 30px;
+ 
+}
+.about-content:hover{
+  box-shadow: 0 8px 16px 0 rgb(0 0 0 / 40%);
+  transform: translateY(-6px);
 }
 .profile {
   border: 1px solid black;
@@ -283,6 +244,15 @@ h2 {
   background-color: white;
 }
 
+/* skill floating div */
+
+#skillCanvasContainer {
+  display:inline-block;
+  margin-right: 200px;
+}
+#skillCanvas {
+    margin: auto;
+  }
 
 /* timeline section */
 .timeline-sec h2{
@@ -660,21 +630,15 @@ h2 {
 .pro-card {
   width: min(35rem, 100%);
   height: fit-content;
-
   background: var(--darker-bg-color);
-
   border-radius: 1.5rem;
-
   box-shadow: 0 2px 8px 0 rgb(0 0 0 / 40%);
-
   cursor: pointer;
-
   transition: 0.5s;
 }
 
 .pro-card:hover {
   box-shadow: 0 8px 16px 0 rgb(0 0 0 / 40%);
-  
   transform: translateY(-6px);
 }
 
