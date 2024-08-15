@@ -1059,12 +1059,29 @@ body.night-mode {
   color: #fffdfd;
   transition: all 0.5s ease-in-out;
 }
+.night-mode #about-div{
+  width: min(35rem, 100%);
+  height: fit-content;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 40%);
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 30px;
+}
 .night-mode .about-para{
   color: rgb(0, 0, 0);
 }
 
 .night-mode .main-timeline .description{
-  color: white;
+  width: min(35rem, 100%);
+  height: fit-content;
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 8px 0 rgb(0 0 0 / 40%);
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 30px;
 }
 
 .night-mode .main-timeline .title{
