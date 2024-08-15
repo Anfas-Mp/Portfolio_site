@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
 });
 //preloader end
 
-
 // hacked text animation
 
 function rand(min, max) {
@@ -80,7 +79,6 @@ function init() {
 setInterval(init, 4000);
 //hacktext animation end
 
-
 //  mode switch function
 
 document.getElementById("switch").addEventListener("change", function () {
@@ -126,7 +124,7 @@ const colors = [
   "#000000",
   "#000000",
   "#000000",
-  "#000000"
+  "#000000",
 ];
 
 circles.forEach(function (circle, index) {
@@ -135,23 +133,21 @@ circles.forEach(function (circle, index) {
   circle.style.backgroundColor = colors[index % colors.length];
 });
 
-window.addEventListener("mousemove", function(e){
+window.addEventListener("mousemove", function (e) {
   coords.x = e.clientX;
   coords.y = e.clientY;
-  
 });
 
 function animateCircles() {
-  
   let x = coords.x;
   let y = coords.y;
-  
+
   circles.forEach(function (circle, index) {
     circle.style.left = x - 12 + "px";
     circle.style.top = y - 12 + "px";
-    
+
     circle.style.scale = (circles.length - index) / circles.length;
-    
+
     circle.x = x;
     circle.y = y;
 
@@ -159,10 +155,31 @@ function animateCircles() {
     x += (nextCircle.x - x) * 0.3;
     y += (nextCircle.y - y) * 0.3;
   });
- 
+
   requestAnimationFrame(animateCircles);
 }
 
 animateCircles();
 
 // cursor js end
+
+// send mail
+
+function sendemail() {
+  let email = document.getElementById("email").value;
+  let name = document.getElementById("name").value;
+  let message = document.getElementById("message").value;
+
+  var templateParams = {
+    email: email,
+    name: name,
+    message: message,
+  };
+
+  emailjs
+    .send("service_vyzlhyh", "template_x0hyonk", templateParams)
+    .then(function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+      window.alert("Sent successfully! Thank You for Reaching Out!");
+    });
+}
